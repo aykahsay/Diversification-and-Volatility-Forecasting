@@ -1,8 +1,3 @@
-# Volatility-Forecasting-in-Kenya
-Got it 👍 You want **everything** (intro, setup, usage, future work, etc.) under **one single Markdown file**.
-Here’s the full **README.md** you can directly use:
-
-```markdown
 # 📈 Volatility Forecasting in South Africa
 
 This project explores **stock market volatility forecasting** using data from the South African financial market.  
@@ -66,8 +61,10 @@ venv\Scripts\activate      # Windows
 
 ### 3. Install dependencies
 
+All dependencies are listed here. You can copy them into `requirements.txt` or install directly:
+
 ```bash
-pip install -r requirements.txt
+pip install pandas numpy matplotlib seaborn scikit-learn statsmodels pydantic-settings alpha_vantage
 ```
 
 ### 4. Configure environment variables
@@ -119,21 +116,7 @@ print(data.head())
 
 ---
 
-## 👨‍💻 Author
-
-**Ambachow Kahsay**
-📧 [your.email@example.com](mailto:your.email@example.com)
-🔗 [LinkedIn](https://linkedin.com) | [Portfolio](https://your-portfolio.com)
-
----
-
 ## 📜 License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
-```
-
----
-
-👉 Do you also want me to **embed the dependencies (requirements.txt content)** directly inside this README so you don’t need a separate file?
-```
