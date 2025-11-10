@@ -1,122 +1,56 @@
-# 📈 Volatility Forecasting in South Africa
+# Stock Data Analysis and GARCH Modeling
 
-This project explores **stock market volatility forecasting** using data from the South African financial market.  
-It leverages Python, machine learning, and time series models to analyze trends, forecast volatility, and gain insights into financial risks.
-
----
-
-## 🚀 Project Overview
-Stock markets are dynamic, with prices moving constantly due to supply and demand, investor behavior, and economic factors.  
-This project focuses on:
-- Collecting financial time series data (**open, high, low, close, volume**).
-- Storing and managing data in **SQLite**.
-- Implementing forecasting models (e.g., **ARIMA, GARCH, ML-based approaches**).
-- Analyzing volatility patterns in the South African stock market.
+This repository provides a complete workflow for retrieving, storing, analyzing, and modeling stock price data. It integrates the AlphaVantage API with a SQLite database and includes tools for return analysis and volatility modeling using GARCH models.
 
 ---
 
-## 🛠️ Tech Stack
-- **Python 3.13+**
-- **SQLite** (for database management)
-- **Pandas, NumPy** (data manipulation)
-- **Matplotlib, Seaborn** (visualization)
-- **Scikit-learn, Statsmodels** (modeling & forecasting)
-- **pydantic-settings** (configuration management)
+## Overview
+
+The project consists of two main components:
+
+1. **Data Acquisition and Storage**
+   - Fetches daily stock price data from the AlphaVantage API.
+   - Stores the data in a local SQLite database for efficient access and reuse.
+   - Ensures data is clean, structured, and ready for analysis.
+
+2. **Data Analysis and Volatility Modeling**
+   - Computes daily returns, expected returns, and variances for multiple stocks.
+   - Fits GARCH (Generalized Autoregressive Conditional Heteroskedasticity) models to estimate and forecast stock volatility.
+   - Provides tools for exploratory data analysis (EDA), including visualization of returns and volatility trends.
 
 ---
 
-## 📂 Project Structure
-```
+## Key Features
 
-Volatility-Forecasting-in-South-Africa/
-│── config.py           # Configuration (API keys, DB paths, etc.)
-│── database.py         # SQLite connection & queries
-│── data_fetch.py       # Fetch stock data from AlphaVantage
-│── analysis.ipynb      # Exploratory Data Analysis & visualizations
-│── models.py           # Forecasting models (ARIMA, GARCH, ML)
-│── requirements.txt    # Python dependencies
-│── README.md           # Project documentation
-│── .env                # API keys & sensitive credentials
-│── stocks.sqlite       # SQLite database (generated after fetch)
-
-````
+- Easy-to-use interface for downloading and managing stock data.
+- Supports multiple tickers and historical data ranges.
+- Stores data locally to avoid repeated API calls.
+- Clean and formatted data for financial modeling and analysis.
+- Volatility forecasting using GARCH models.
+- Ready for integration into broader quantitative finance or trading strategies.
 
 ---
 
-## 🔑 Setup Instructions
+## Project Structure
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/your-username/Volatility-Forecasting-in-South-Africa.git
-cd Volatility-Forecasting-in-South-Africa
-````
-
-### 2. Create a virtual environment
-
-```bash
-python -m venv venv
-source venv/bin/activate   # Mac/Linux
-venv\Scripts\activate      # Windows
-```
-
-### 3. Install dependencies
-
-All dependencies are listed here. You can copy them into `requirements.txt` or install directly:
-
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn statsmodels pydantic-settings alpha_vantage
-```
-
-### 4. Configure environment variables
-
-Create a `.env` file in the project root:
-
-```
-ALPHA_API_KEY=your_api_key_here
-DB_NAME=stocks.sqlite
-MODEL_DIRECTORY=models
-```
-
-### 5. Run the project
-
-```bash
-python data_fetch.py
-```
+- **AlphaVantage API Wrapper** – Handles fetching stock data and formatting it for analysis.
+- **SQLite Repository** – Manages storing and retrieving stock data efficiently.
+- **GARCH Modeling** – Fits volatility models and generates forecasts for risk analysis.
+- **Exploratory Data Analysis (EDA)** – Tools for analyzing returns, variance, and trends.
 
 ---
 
-## 📊 Example Usage
+## Purpose
 
-```python
-from database import Database
+This repository is designed to:
 
-db = Database("stocks.sqlite")
-data = db.get_stock_data("JSE")  # Example for Johannesburg Stock Exchange
-print(data.head())
-```
-
----
-
-## ✅ Features
-
-* Fetch stock data using **AlphaVantage API**
-* Store and query data in **SQLite**
-* Time series forecasting using **ARIMA & GARCH**
-* Visualize market trends & volatility
-* Extendable to other African stock markets
+- Simplify access to historical stock data.
+- Provide a reproducible framework for financial analysis.
+- Enable volatility modeling for investment and risk management decisions.
+- Serve as a foundation for further quantitative finance projects, including predictive modeling and portfolio optimization.
 
 ---
 
-## 🌍 Future Work
+## License
 
-* Incorporate real-time streaming data
-* Test deep learning models (**LSTM, Transformer**)
-* Compare South African market with global indices
-* Deploy interactive dashboards (**Plotly/Dash/Streamlit**)
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
+MIT License.
