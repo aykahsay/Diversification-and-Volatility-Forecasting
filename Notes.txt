@@ -1,0 +1,126 @@
+list of popular stocks from different sectors
+### **1. Energy Sector**
+
+Energy stocks typically include companies in oil, natural gas, and renewable energy industries.
+
+* **ExxonMobil** – **XOM**
+* **Chevron** – **CVX**
+* **Shell** – **SHEL** (formerly RDS.A)
+* **ConocoPhillips** – **COP**
+* **Occidental Petroleum** – **OXY**
+* **NextEra Energy** – **NEE** (Renewable energy)
+* **Enphase Energy** – **ENPH** (Renewable energy)
+* **Cenovus Energy** – **CVE**
+
+### **2. Health Care Sector**
+
+The healthcare sector includes pharmaceutical, biotechnology, and medical equipment companies.
+
+* **Johnson & Johnson** – **JNJ**
+* **Pfizer** – **PFE**
+* **AbbVie** – **ABBV**
+* **Merck** – **MRK**
+* **Eli Lilly and Co.** – **LLY**
+* **Moderna** – **MRNA**
+* **Amgen** – **AMGN**
+* **Cigna** – **CI**
+* **UnitedHealth Group** – **UNH**
+
+### **3. Technology Sector**
+
+Tech stocks are often the most popular and include software, hardware, and semiconductors.
+
+* **Apple** – **AAPL**
+* **Microsoft** – **MSFT**
+* **NVIDIA** – **NVDA**
+* **Alphabet (Google)** – **GOOGL**
+* **Meta (Facebook)** – **META**
+* **Amazon** – **AMZN**
+* **Intel** – **INTC**
+* **Adobe** – **ADBE**
+* **Advanced Micro Devices (AMD)** – **AMD**
+* **Tesla** – **TSLA**
+
+### **4. Financials Sector**
+
+The financial sector is home to banks, investment firms, and insurance companies.
+
+* **JPMorgan Chase & Co.** – **JPM**
+* **Wells Fargo & Co.** – **WFC**
+* **Bank of America** – **BAC**
+* **Citigroup** – **C**
+* **Goldman Sachs** – **GS**
+* **Morgan Stanley** – **MS**
+* **American Express** – **AXP**
+* **Berkshire Hathaway** – **BRK.A**
+
+### **5. Consumer Discretionary**
+
+Consumer discretionary stocks are companies that produce goods and services that are non-essential but desirable, especially in strong economic times.
+
+* **Nike** – **NKE**
+* **McDonald's** – **MCD**
+* **Tesla** – **TSLA**
+* **Home Depot** – **HD**
+* **Starbucks** – **SBUX**
+* **LVMH** – **LVMH**
+* **Disney** – **DIS**
+* **Amazon** – **AMZN**
+
+### **6. Consumer Staples**
+
+These are companies that produce goods that people need on a regular basis, regardless of economic conditions.
+
+* **Procter & Gamble** – **PG**
+* **Coca-Cola** – **KO**
+* **PepsiCo** – **PEP**
+* **Walmart** – **WMT**
+* **Costco** – **COST**
+* **Colgate-Palmolive** – **CL**
+* **Unilever** – **UL**
+
+### **7. Industrials Sector**
+
+This sector includes companies involved in manufacturing, construction, transportation, and infrastructure.
+
+* **Caterpillar** – **CAT**
+* **General Electric** – **GE**
+* **Lockheed Martin** – **LMT**
+* **Union Pacific** – **UNP**
+* **Raytheon Technologies** – **RTX**
+* **3M** – **MMM**
+* **Boeing** – **BA**
+
+### **8. Communication Services**
+
+Companies in this sector include telecom, media, and entertainment companies.
+
+* **Netflix** – **NFLX**
+* **Disney** – **DIS**
+* **Comcast** – **CMCSA**
+* **Verizon** – **VZ**
+* **AT&T** – **T**
+* **T-Mobile** – **TMUS**
+
+### **9. Utilities Sector**
+
+This sector includes electric, water, and gas companies, as well as renewable energy providers.
+
+* **NextEra Energy** – **NEE**
+* **Duke Energy** – **DUK**
+* **Southern Company** – **SO**
+* **Consolidated Edison** – **ED**
+* **Xcel Energy** – **XEL**
+* **Northeast Utilities** – **NU**
+
+### **10. Real Estate Sector**
+
+Companies that own, develop, or manage real estate properties, such as REITs (Real Estate Investment Trusts).
+
+* **Prologis** – **PLD**
+* **Simon Property Group** – **SPG**
+* **Equity Residential** – **EQR**
+* **Public Storage** – **PSA**
+* **Realty Income** – **O**
+
+---

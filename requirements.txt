@@ -1,0 +1,6 @@
+
+# Go to the command line, navigate to the directory for this project, and start your app server by entering the following command.
+
+uvicorn main:app --reload --workers 1 --host localhost --port 8008
+cd "C:\Users\Admin\OneDrive - United States International University (USIU)\Documents\KULU_Doc\Projects\Volatility-Forecasting-in-Kenya"
+
