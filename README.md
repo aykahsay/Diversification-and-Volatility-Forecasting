@@ -1,75 +1,53 @@
-Here is your **clean, professional, copy-paste ready Markdown README** (no formatting issues, ready for GitHub):
+# Diversification & Volatility Forecasting
+
+> A quantitative finance and data engineering system for modeling, forecasting, and optimizing financial market risk using data from .
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-backend-009688?style=flat-square&logo=fastapi)
+![SQLite](https://img.shields.io/badge/SQLite-database-003B57?style=flat-square&logo=sqlite)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
 ---
 
-```markdown
-# 📈 Diversification & Volatility Forecasting in Kenya
+## Overview
 
-A quantitative finance and data engineering project focused on **modeling, forecasting, and optimizing financial market risk** using Kenyan and global equity data.
-
-This system combines **classical econometrics (GARCH)** with **modern data pipelines (Python + API + SQLite + FastAPI)** to deliver **risk-aware portfolio insights**.
-
----
-
-## 🚀 Project Overview
-
-Financial markets exhibit **time-varying volatility**, making risk prediction essential for:
-
-- Portfolio optimization  
-- Risk management (Value at Risk, Sharpe Ratio)  
-- Asset allocation strategies  
-
-This project builds a complete pipeline:
+Financial markets exhibit **time-varying volatility**, making risk prediction essential for portfolio optimization, risk management, and asset allocation. This project builds a complete end-to-end pipeline:
 
 ```
-
-API → Data → Storage → Modeling (GARCH) → Portfolio Optimization → Insights
-
+API  →  Data Ingestion  →  SQLite Storage  →  GARCH Modeling  →  Portfolio Optimization  →  Insights
 ```
 
 ---
 
-## 🧠 Core Objectives
+## Core Objectives
 
-- Model **volatility clustering** using GARCH  
-- Analyze **risk-return trade-offs (Mean–Variance Analysis)**  
-- Optimize portfolios using the **Efficient Frontier**  
-- Evaluate performance using the **Sharpe Ratio**  
-- Build a **scalable data pipeline**  
-
----
-
-## 🛠️ Tech Stack
-
-### 🔹 Core
-- Python 3.10+
-- SQLite
-- Pandas, NumPy
-
-### 🔹 Modeling
-- arch (GARCH models)
-- statsmodels
-- scikit-learn
-
-### 🔹 Backend
-- FastAPI
-- Uvicorn
-
-### 🔹 Configuration
-- pydantic-settings
-- .env file
+- Model **volatility clustering** using GARCH(1,1)
+- Analyze **risk-return trade-offs** via Mean–Variance Analysis
+- Optimize portfolios using the **Efficient Frontier**
+- Evaluate performance using the **Sharpe Ratio**
+- Build a **scalable, modular data pipeline**
 
 ---
 
-## 📂 Project Structure
+## Tech Stack
+
+| Layer | Tools |
+|---|---|
+| **Core** | Python 3.10+, SQLite, Pandas, NumPy |
+| **Modelling** | `arch` (GARCH), statsmodels, scikit-learn |
+| **Backend** | FastAPI, Uvicorn |
+| **Config** | pydantic-settings, `.env` |
+
+---
+
+## Project Structure
 
 ```
-
 diversification-volatility-forecasting/
 │
 ├── api/                    # API integrations (AlphaVantage)
-├── pipeline/               # Workflow logic
-├── processing/             # Data cleaning & features
+├── pipeline/               # Workflow orchestration
+├── processing/             # Data cleaning & feature engineering
 ├── models/
 │   └── volatility_model.py # GARCH implementation
 ├── db/                     # Database logic
@@ -83,212 +61,155 @@ diversification-volatility-forecasting/
 ├── requirements.txt
 ├── README.md
 └── .env
-
 ```
 
 ---
 
-## 🔑 Setup Instructions
+## Setup
 
-### 1. Clone Repository
+### 1. Clone the repository
 
-```
-
-git clone [https://github.com/your-username/diversification-volatility-forecasting.git](https://github.com/your-username/diversification-volatility-forecasting.git)
+```bash
+git clone https://github.com/your-username/diversification-volatility-forecasting.git
 cd diversification-volatility-forecasting
-
 ```
 
----
+### 2. Create a virtual environment
 
-### 2. Create Virtual Environment
-
-```
-
+```bash
 python -m venv venv
-venv\Scripts\activate
-
+venv\Scripts\activate        # Windows
+source venv/bin/activate     # macOS / Linux
 ```
 
----
+### 3. Install dependencies
 
-### 3. Install Dependencies
-
-```
-
+```bash
 pip install -r requirements.txt
-
 ```
 
----
+### 4. Configure environment
 
-### 4. Configure Environment
+Create a `.env` file in the root directory:
 
-Create `.env` file:
-
-```
-
+```env
 ALPHA_API_KEY=your_api_key_here
 DB_NAME=stocks.sqlite
 MODEL_DIRECTORY=./models
-
 ```
 
----
+### 5. Run the project
 
-### 5. Run Project
-
-```
-
+```bash
 python main.py
-
 ```
 
----
+### 6. Launch the API server (optional)
 
-### 6. Run API Server (Optional)
-
-```
-
+```bash
 uvicorn main:app --reload --port 8008
-
 ```
 
-Open:
-```
-
-[http://localhost:8008/docs](http://localhost:8008/docs)
-
-```
+API docs available at: `http://localhost:8008/docs`
 
 ---
 
-## 📊 Analytical Components
+## Analytical Components
 
-### 📈 Mean–Variance Analysis
-Evaluates expected return vs risk across assets.
+### GARCH(1,1) Volatility Model
 
-- Amazon → High return, high risk  
-- Shell → Balanced and stable  
-- JNJ → Low risk  
-- S&P 500 → Benchmark  
+Captures time-varying risk that static models miss:
+
+```
+σ²ₜ = ω + α·ε²ₜ₋₁ + β·σ²ₜ₋₁
+```
+
+- `ω` — long-run variance
+- `α` — sensitivity to recent shocks
+- `β` — persistence of past volatility
+
+### Sharpe Ratio
+
+```
+Sharpe = (Rₚ − Rƒ) / σₚ
+```
+
+Measures excess return per unit of risk. Higher values indicate better risk-adjusted performance.
+
+### Mean–Variance Analysis
+
+Evaluates expected return vs. risk across the asset universe:
+
+| Asset | Profile |
+|---|---|
+| Amazon | High return, high risk |
+| Shell | Balanced and stable |
+| JNJ | Low risk, defensive |
+| S&P 500 | Market benchmark |
+
+### Efficient Frontier
+
+Simulates thousands of portfolio combinations to identify the optimal risk-return curve and the maximum Sharpe ratio portfolio.
 
 ---
 
-### ⚖️ Sharpe Ratio
+## Results
 
-```
-
-Sharpe Ratio = (Return - Risk Free Rate) / Volatility
-
-```
-
-- Measures risk-adjusted performance  
-- Higher is better  
-
----
-
-### 📉 GARCH Model
-
-```
-
-σ²ₜ = ω + αε²ₜ₋₁ + βσ²ₜ₋₁
-
-```
-
-Captures:
-- Volatility clustering  
-- Market shocks  
-- Time-dependent risk  
-
----
-
-### 🚀 Efficient Frontier
-
-- Simulated portfolios  
-- Identifies optimal risk-return combinations  
-- Finds maximum Sharpe ratio  
-
----
-
-### 🧩 Optimal Portfolio Example
+### Optimal Portfolio Weights
 
 | Asset | Weight |
-|------|--------|
+|---|---|
 | Amazon | 74.41% |
 | Shell | 17.27% |
-| Others | Remaining |
+| Others | 8.32% |
 
----
-
-### 📊 Performance Summary
+### Performance Summary
 
 | Metric | Value |
-|------|------|
+|---|---|
 | Expected Daily Return | 0.51% |
-| Volatility | 0.28% |
-| Sharpe Ratio | 1.845 |
+| Daily Volatility | 0.28% |
+| Sharpe Ratio | **1.845** |
 
 ---
 
-## 💡 Key Insights
+## Key Insights
 
-- Volatility changes over time (not constant)  
-- Diversification reduces risk  
-- High-return assets increase volatility  
-- Optimal portfolios balance risk and return  
-
----
-
-## ⚙️ Engineering Highlights
-
-- Modular architecture (API, models, pipeline, DB)  
-- Environment-based configuration  
-- Scalable and reusable code structure  
-- Database-backed workflow  
+- **Volatility is time-varying** — GARCH outperforms static models by capturing clustering effects
+- **Diversification works** — combining uncorrelated assets measurably reduces portfolio risk
+- **Return comes with risk** — high-return assets increase overall volatility; balance is essential
+- **Efficient frontier is actionable** — identifies the exact weights that maximise risk-adjusted return
 
 ---
 
-## 🌍 Future Work
+## Engineering Highlights
 
-- Real-time data streaming  
-- Deep learning models (LSTM, Transformers)  
-- Advanced risk metrics (VaR, CVaR)  
-- Dashboard (Streamlit / Plotly)  
+- Modular architecture separating API, pipeline, models, and database layers
+- Environment-based configuration via `.env` and pydantic-settings
+- SQLite-backed workflow for reproducibility and portability
+- FastAPI layer for serving model outputs as a REST API
 
 ---
 
-## 👨‍💻 Author
+## Roadmap
+
+- [ ] Real-time data streaming
+- [ ] Deep learning models (LSTM, Transformers)
+- [ ] Advanced risk metrics (VaR, CVaR)
+- [ ] Interactive dashboard (Streamlit / Plotly)
+
+---
+
+## Author
 
 **Ambachow Kahsay**
+Data Science · Quantitative Finance · Software Engineering
 
-- Software Engineering  
-- Data Science  
-- Quantitative Finance  
-
-GitHub: https://github.com/your-username  
+- GitHub: [github.com/aykahsay](https://github.com/aykahsay)
+- LinkedIn: [linkedin.com/in/ambachow-kahsay-863b7b291](https://linkedin.com/in/ambachow-kahsay-863b7b291)
 
 ---
 
-## 📜 License
+## License
 
-MIT License
-```
-
----
-
-# ✅ You can now:
-
-* Paste this directly into `README.md`
-* Push to GitHub
-* Use it for portfolio / internship
-
----
-
-If you want next upgrade:
-
-👉 Add **architecture diagram (very powerful)**
-👉 Add **API endpoint examples**
-👉 Convert this into **CV bullet points**
-
-Just tell me 🚀
+MIT License — see [LICENSE](LICENSE) for details.
