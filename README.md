@@ -1,6 +1,6 @@
 # Diversification & Volatility Forecasting
 
-> A quantitative finance and data engineering system for modeling, forecasting, and optimizing financial market risk using data from .
+> A quantitative finance and data engineering system for modeling, forecasting, and optimizing financial market risk using data from Alpha Vantage.
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)
 ![FastAPI](https://img.shields.io/badge/FastAPI-backend-009688?style=flat-square&logo=fastapi)
